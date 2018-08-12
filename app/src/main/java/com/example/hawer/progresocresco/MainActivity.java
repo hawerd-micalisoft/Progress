@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_card_view);
 
-        progressBar = findViewById(R.id.progressbar_retos);
-        sumarButton = findViewById(R.id.botonSumar);
-        labelProgresso = findViewById(R.id.label_progreso);
-        sumarButton.setOnClickListener( onButtonClick );
-
-        labelProgresso.setText( String.valueOf(cantidadProgreso) );
+//        progressBar = findViewById(R.id.progressbar_retos);
+//        sumarButton = findViewById(R.id.botonSumar);
+//        labelProgresso = findViewById(R.id.label_progreso);
+//        sumarButton.setOnClickListener( onButtonClick );
+//
+//        labelProgresso.setText( String.valueOf(cantidadProgreso) );
     }
 
     private View.OnClickListener onButtonClick = new View.OnClickListener() {
