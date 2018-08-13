@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <android.support.constraint.Guideline
         android:id="@+id/margin_left_logo"
@@ -39,9 +39,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_percent="0.4" />
 
     <ImageView
+        android:id="@+id/login_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/logo_cresco"
@@ -50,49 +51,67 @@
         app:layout_constraintRight_toRightOf="@+id/margin_right_logo"
         app:layout_constraintTop_toTopOf="@+id/margin_top_logo" />
 
-    <android.support.design.widget.TextInputEditText
-        android:id="@+id/login_cedula"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:fontFamily="sans-serif"
-        android:background="@drawable/style_rounded_corners"
-        android:backgroundTint="@color/colorPrimary"
-        android:hint="Ingrese N° de cedula"
-        android:textColor="#bebfbe"
-        android:textColorHint="#bebfbe"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/margin_left_logo"
         app:layout_constraintRight_toRightOf="@+id/margin_right_logo"
-        app:layout_constraintTop_toBottomOf="@+id/margin_top_inputs"/>
+        app:layout_constraintTop_toBottomOf="@+id/login_logo">
 
-    <android.support.design.widget.TextInputEditText
-        android:id="@+id/login_codigo_referido"
-        android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif"
-        android:background="@drawable/style_rounded_corners"
-        android:backgroundTint="@color/colorPrimary"
-        android:hint="Ingrese Codigo Referido"
-        android:textColor="#bebfbe"
-        android:textColorHint="#bebfbe"
-        app:layout_constraintLeft_toLeftOf="@+id/margin_left_logo"
-        app:layout_constraintRight_toRightOf="@+id/margin_right_logo"
-        app:layout_constraintTop_toBottomOf="@+id/login_cedula"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="40dp">
 
-        <Button
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:text="Entrar"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
-            android:background="@drawable/background_redondo_boton"
-            app:layout_constraintTop_toBottomOf="@+id/login_codigo_referido"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/login_cedula"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/style_rounded_corners"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif"
+                android:hint="Ingrese N° de cedula"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#bebfbe"
+                android:textColorHint="#bebfbe" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/login_codigo_referido"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/style_rounded_corners"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif"
+                android:hint="Ingrese Codigo Referido"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#bebfbe"
+                android:textColorHint="#bebfbe"
+                app:layout_constraintTop_toBottomOf="@+id/login_cedula" />
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_redondo_boton"
+                android:text="Entrar"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_codigo_referido" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

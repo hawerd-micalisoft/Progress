@@ -87,6 +87,8 @@
                     android:orientation="horizontal"
                     app:layout_constraintGuide_percent="1" />
 
+                <!--INICIA LAYOUT PARA MOSTRAR BARRA DE PROGRESO-->
+
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/contenedor_layout_progresso"
                     android:layout_width="0dp"
@@ -146,7 +148,7 @@
                         android:layout_width="0dp"
                         android:layout_height="120dp"
                         android:padding="4dp"
-                        android:progress="33"
+                        android:progress="0"
                         android:progressDrawable="@drawable/style_circle"
                         android:rotation="270"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -158,7 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
-                        android:text="33%"
+                        android:text="0%"
                         android:textColor="@color/colorOrange"
                         android:textSize="24dp"
                         android:textStyle="bold"
@@ -168,6 +170,8 @@
                         app:layout_constraintTop_toBottomOf="@+id/label_percentaje" />
 
                 </android.support.constraint.ConstraintLayout>
+
+                <!--INICIA LAYOUT PARA MOSTRAR BARRA DE PROGRESO-->
 
                 <android.support.constraint.Guideline
                     android:id="@+id/linea_divisora_footer_content"
@@ -217,6 +221,8 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
+
+                <!--INICIA LAYOUT PARA LAS MEDALLAS-->
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/contenido_derecho"
@@ -354,6 +360,8 @@
 
                 </android.support.constraint.ConstraintLayout>
 
+                <!--INICIA LAYOUT PARA LAS MEDALLAS-->
+
             </android.support.constraint.ConstraintLayout>
 
             <!--LAYOUT PARA MOSTRAR EL PROGRESO-->
@@ -363,13 +371,13 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/contendor_layout_retos_finzalizados"
                 android:layout_width="0dp"
-                android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:background="@color/colorPrimary"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
+                android:visibility="gone"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linea_inser_layout_final">
@@ -455,26 +463,25 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:gravity="center"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center"
                     app:layout_constraintBottom_toTopOf="@+id/cantidad_consecutivos"
                     app:layout_constraintLeft_toLeftOf="@+id/linea_divisora_vertical_retos_finalizados"
-                    app:layout_constraintRight_toRightOf="parent">
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
                         android:gravity="center"
                         android:text="racha"
-                        android:fontFamily="sans-serif"
-                        android:textStyle="bold"
-                        android:textSize="24dp"
                         android:textAllCaps="true"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -485,10 +492,10 @@
                     android:layout_marginRight="16dp"
                     android:background="@drawable/style_rounded_corners"
                     android:backgroundTint="@color/colorOrange"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical"
                     android:paddingBottom="4dp"
                     android:paddingTop="4dp"
-                    android:gravity="center_horizontal"
                     app:layout_constraintBottom_toTopOf="@+id/margin_bottom_layout_retos_finazalizdos"
                     app:layout_constraintLeft_toLeftOf="@+id/linea_divisora_vertical_retos_finalizados"
                     app:layout_constraintRight_toRightOf="parent">
@@ -496,12 +503,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
                         android:gravity="center"
                         android:text="30"
-                        android:fontFamily="sans-serif"
-                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
                         android:textSize="24dp"
-                        android:textColor="@android:color/white" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -593,5 +600,25 @@
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/botonSumar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completar reto"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/irmain"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a main"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"/>
 
 </android.support.design.widget.CoordinatorLayout>
